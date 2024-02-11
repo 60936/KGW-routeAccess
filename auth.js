@@ -13,4 +13,6 @@ const getAuthorizer = (name, pass) => (req, res, next) => {
 const admin = getAuthorizer('admin', 'secret')
 const user = getAuthorizer('user', '12345')
 
+
+
 module.exports = { admin, user, getAuthorizer }
