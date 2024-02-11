@@ -5,10 +5,13 @@ const auth = require('./auth')
 // Middleware to parse incoming req bodies
 app.use(express.urlencoded({extended:true}));
 
+//using template engines
 app.set('view engine','ejs');
 
-app.get('/views/login', (req, res)=>{
-  res.render('login')
+// route to load login page                                                                  
+app.get('/', (req, res)=>{
+  res.render('login');
+  
 });
 
 app.post('/authenticate', (req, res) => {
