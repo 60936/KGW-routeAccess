@@ -1,5 +1,5 @@
 const auth = require('basic-auth');
-const User = require('./models/User'); // Assuming you have a User model for interacting with user data
+const User = require('./1user'); // Assuming you have a User model for interacting with user data
 
 const getAuthorizer = (req, res, next) => {
   const user = auth(req);
